@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './media.css';
 
 class Media extends Component {
@@ -20,5 +21,18 @@ class Media extends Component {
     )
   }
 }
+
+Media.defaultProps = {
+  author: 'Unknown',
+  image: './src/images/covers/default-image.png',
+};
+
+Media.propTypes = {
+  author: PropTypes.string,
+  image: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['video', 'audio']).isRequired,
+};
+
 
 export default Media;

@@ -7,6 +7,7 @@ const app = document.getElementById('app');
 import Media from './src/playlist/components/media';
 
 render(<Media
+  type="video"
   title="What is responsive design?"
   author="Fabián Veliz"
   image="./src/images/covers/react.jpeg"
