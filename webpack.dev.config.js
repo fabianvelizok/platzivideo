@@ -1,5 +1,6 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -37,7 +38,7 @@ module.exports = {
           options: {
             limit: 1000000,
             fallback: 'file-loader',
-            name: 'images/[name].[hash].[ext]',
+            name: 'images/[name].[ext]',
           }
         }
       },
@@ -49,5 +50,11 @@ module.exports = {
       inject: 'body',
       hash: true,
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "vendor",
+      minChunks: function (module) {
+        return module.context && module.context.includes("node_modules");
+      }
+    })
   ]
 }
