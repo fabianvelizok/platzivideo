@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { categories as fakeList } from './src/api.json';
 
 const app = document.getElementById('app');
 
 // Components
-import Media from './src/playlist/components/media';
+import Playlist from './src/playlist/components/playlist';
 
-render(<Media
-  type="video"
-  title="What is responsive design?"
-  author="Fabián Veliz"
-  image="./src/images/covers/react.jpeg"
-  />, app);
+const lists = fakeList.map((listItem) => {
+  return <Playlist data={listItem} key={listItem.id} />;
+})
+
+render(lists, app);

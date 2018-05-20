@@ -4,29 +4,25 @@ import './media.css';
 
 class Media extends Component {
   // The ES7 way
-  state = { // FIXME: Put this in lifecycle.
-    author: this.props.author
-  };
-
   handleClick = () => {
-    this.setState({
-      author: 'New author!'
-    });
+    console.log('click')
   }
 
   render() {
+    const { cover, title, author } = this.props;
+
     return (
       <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img
             className="Media-image"
-            src={this.props.image}
-            alt="React"
+            src={cover}
+            alt={title}
             width="260"
             height="160"
           />
-          <h3 className="Media-title">{this.props.title}</h3>
-          <p className="Media-author">{this.state.author}</p>
+          <h3 className="Media-title">{title}</h3>
+          <p className="Media-author">{author}</p>
         </div>
       </div>
     )
@@ -35,12 +31,12 @@ class Media extends Component {
 
 Media.defaultProps = {
   author: 'Unknown',
-  image: './src/images/covers/default-image.png',
+  cover: './src/images/covers/default-image.png',
 };
 
 Media.propTypes = {
   author: PropTypes.string,
-  image: PropTypes.string,
+  cover: PropTypes.string,
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['video', 'audio']).isRequired,
 };
