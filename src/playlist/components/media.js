@@ -3,9 +3,20 @@ import PropTypes from 'prop-types';
 import './media.css';
 
 class Media extends Component {
+  // The ES7 way
+  state = { // FIXME: Put this in lifecycle.
+    author: this.props.author
+  };
+
+  handleClick = () => {
+    this.setState({
+      author: 'New author!'
+    });
+  }
+
   render() {
     return (
-      <div className="Media">
+      <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img
             className="Media-image"
@@ -15,7 +26,7 @@ class Media extends Component {
             height="160"
           />
           <h3 className="Media-title">{this.props.title}</h3>
-          <p className="Media-author">{this.props.author}</p>
+          <p className="Media-author">{this.state.author}</p>
         </div>
       </div>
     )
