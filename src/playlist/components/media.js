@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './media.css';
 
-class Media extends Component {
+// Pure component: If props are different, then re-render it.
+class Media extends PureComponent {
   // The ES7 way
   handleClick = () => {
     console.log('click')
