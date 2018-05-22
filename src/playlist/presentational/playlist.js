@@ -2,7 +2,7 @@ import React from 'react';
 import Media from './media';
 import './playlist.css';
 
-import { Play, Pause, Volume, FullScreen } from '../../icons/components/list';
+import { Play, Pause, Volume, FullScreen } from '../../icons/presentational/list';
 
 // Functional component: No lifecycle.
 function Playlist(props) {
