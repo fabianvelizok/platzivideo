@@ -7,7 +7,11 @@ function Categories(props) {
     <div className="Categories">
       {
         props.categories.map((category) => {
-          return <Category {...category} key={category.id} />
+          return <Category
+            {...category}
+            key={category.id}
+            handleClick={props.handleClick}
+          />
         })
       }
     </div>

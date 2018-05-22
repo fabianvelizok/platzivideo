@@ -9,6 +9,7 @@ function Category(props) {
       <p className="CategoryDescription">{props.description}</p>
       <Playlist
         playlist={props.playlist}
+        handleClick={props.handleClick}
       />
     </div>
   );
