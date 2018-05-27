@@ -7,7 +7,8 @@ import Categories from '../../categories/presentational/categories';
 import Related from '../../related/presentational/related';
 import Modal from '../../modal/container/modal';
 import MediaModal from '../../modal/presentational/media-modal';
-import HandleError from '../../errors/containers/handle-error';
+import HandleError from '../../errors/container/handle-error';
+import VideoPlayer from '../../video-player/container/video-player';
 
 class Home extends Component {ç
   // States
@@ -34,6 +35,7 @@ class Home extends Component {ç
     return (
       <HandleError>
         <HomeLayout>
+          <VideoPlayer />
           <Related />
           <Categories categories={categories} handleClick={this.handleOpenModal}/>
           { this.state.modalVisible && <Modal>
