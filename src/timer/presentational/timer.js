@@ -4,7 +4,7 @@ import './timer.css';
 const Timer = (props) => (
   <div className="Timer">
     <p>
-      00 / {props.duration}
+      {props.currentTime} / {props.duration}
     </p>
   </div>
 );

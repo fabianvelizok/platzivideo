@@ -5,11 +5,13 @@ import VideoTitle from '../presentational/video-title';
 import PlayPause from '../../play-pause/presentational/play-pause';
 import Timer from '../../timer/presentational/timer';
 import Controls from '../../video-player-controls/presentational/video-player-controls';
+import { formatTime } from '../../utils/list';
 
 class VideoPlayer extends Component {
   state = {
     pause: true,
-    duration: 0,
+    duration: '0:00',
+    currentTime: '0:00',
   };
 
   togglePlay = () => {
@@ -21,7 +23,13 @@ class VideoPlayer extends Component {
   handleLoadedMetadata = (event) => {
     this.video = event.target;
     this.setState({
-      duration: this.video.duration
+      duration: formatTime(this.video.duration)
+    })
+  }
+
+  handleTimeUpdate = (event) => {
+    this.setState({
+      currentTime: formatTime(this.video.currentTime)
     })
   }
 
@@ -38,6 +46,7 @@ class VideoPlayer extends Component {
           />
           <Timer
             duration={this.state.duration}
+            currentTime={this.state.currentTime}
           />
         </Controls>
         <Video
@@ -45,6 +54,7 @@ class VideoPlayer extends Component {
           autoplay={true}
           src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
           handleLoadedMetadata={this.handleLoadedMetadata}
+          handleTimeUpdate={this.handleTimeUpdate}
         />
       </VideoPlayerLayout>
     );
