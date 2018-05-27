@@ -23,6 +23,7 @@ class Video extends Component {
           ref={this.setRef}
           autoPlay={this.props.autoplay}
           src={this.props.src}
+          onLoadedMetadata={this.props.handleLoadedMetadata}
         />
       </div>
     );
