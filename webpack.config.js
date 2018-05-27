@@ -6,7 +6,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = (env) => {
   const plugins = [
     new ExtractTextPlugin("css/[name].css"),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      inject: 'body',
+      hash: true,
+    }),
   ]
 
   if (env.NODE_ENV === 'production') {
