@@ -14,12 +14,14 @@ class Home extends Component {ç
   // States
   state = {
     modalVisible: false,
+    media: {},
   };
 
   // Functions
-  handleOpenModal = () => {
+  handleOpenModal = (media) => {
     this.setState({
       modalVisible: true,
+      media,
     });
   }
 
@@ -36,10 +38,18 @@ class Home extends Component {ç
       <HandleError>
         <HomeLayout>
           <Related />
-          <VideoPlayer />
-          <Categories categories={categories} handleClick={this.handleOpenModal}/>
+          <Categories
+            categories={categories}
+            handleClick={this.handleOpenModal}
+          />
           { this.state.modalVisible && <Modal>
-              <MediaModal handleClick={this.handleCloseModal}>Modal</MediaModal>
+              <MediaModal
+                handleClick={this.handleCloseModal}
+              >
+                <VideoPlayer
+                  media={this.state.media}
+                />
+              </MediaModal>
             </Modal>
           }
         </HomeLayout>

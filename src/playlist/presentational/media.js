@@ -4,10 +4,18 @@ import './media.css';
 
 // Pure component: If props are different, then re-render it.
 class Media extends PureComponent {
+  handleMediaClick = () => {
+    return this.props.handleClick({
+      title: this.props.title,
+      src: this.props.src,
+    });
+  }
   render() {
     const { cover, title, author, handleClick } = this.props;
     return (
-      <div className="Media" onClick={handleClick}>
+      <div className="Media"
+           onClick={this.handleMediaClick}
+      >
         <div className="Media-cover">
           <img
             className="Media-image"

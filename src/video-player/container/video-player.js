@@ -94,7 +94,7 @@ class VideoPlayer extends Component {
         setRef={this.setVideoPlayerRef}
       >
         <VideoTitle
-          title="Hola Mundo"
+          title={this.props.media.title}
         />
         <Spinner loading={this.state.loading} />
         <Controls>
@@ -123,7 +123,7 @@ class VideoPlayer extends Component {
         <Video
           pause={this.state.pause}
           autoplay={true}
-          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          src={this.props.media.src}
           handleLoadedMetadata={this.handleLoadedMetadata}
           handleTimeUpdate={this.handleTimeUpdate}
           handleSeeking={this.handleSeeking}
