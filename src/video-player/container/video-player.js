@@ -9,6 +9,7 @@ import { formatTime } from '../../utils/list';
 import ProgressBar from '../../progress-bar/presentational/progress-bar';
 import Spinner from '../../spinner/presentational/spinner';
 import Volume from '../../volume/presentational/volume';
+import FullScreen from '../../full-screen/presentational/full-screen';
 
 class VideoPlayer extends Component {
   state = {
@@ -62,7 +63,7 @@ class VideoPlayer extends Component {
     this.video.volume = volumeValue;
   }
 
-  handleVolumeIconClick = (event) => {
+  handleVolumeIconClick = () => {
     const newVolumeValue = this.state.volumeValue === 0 ?
       this.state.prevVolumeValue : 0;
 
@@ -74,9 +75,24 @@ class VideoPlayer extends Component {
     this.video.volume = newVolumeValue;
   }
 
+  handleFullScreenClick = () => {
+    // TODO: Support cross-browser full screen.
+    if (!document.webkitIsFullScreen) {
+      this.player.webkitRequestFullscreen()
+    } else {
+      document.webkitExitFullscreen();
+    }
+  }
+
+  setVideoPlayerRef = (element) => {
+    this.player = element;
+  }
+
   render() {
     return (
-      <VideoPlayerLayout>
+      <VideoPlayerLayout
+        setRef={this.setVideoPlayerRef}
+      >
         <VideoTitle
           title="Hola Mundo"
         />
@@ -99,6 +115,9 @@ class VideoPlayer extends Component {
             value={this.state.volumeValue}
             handleChange={this.handleVolumeChange}
             handleClick={this.handleVolumeIconClick}
+          />
+          <FullScreen
+            handleClick={this.handleFullScreenClick}
           />
         </Controls>
         <Video
