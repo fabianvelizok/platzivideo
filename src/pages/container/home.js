@@ -35,8 +35,8 @@ class Home extends Component {ç
     return (
       <HandleError>
         <HomeLayout>
-          <VideoPlayer />
           <Related />
+          <VideoPlayer />
           <Categories categories={categories} handleClick={this.handleOpenModal}/>
           { this.state.modalVisible && <Modal>
               <MediaModal handleClick={this.handleCloseModal}>Modal</MediaModal>
