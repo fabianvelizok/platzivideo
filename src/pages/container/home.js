@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import HomeLayout from '../presentational/home-layout';
-import { categories } from '../../api.json';
+import { connect } from 'react-redux';
 
 // Components
+import HomeLayout from '../presentational/home-layout';
 import Categories from '../../categories/presentational/categories';
 import Related from '../../related/presentational/related';
 import Modal from '../../modal/container/modal';
@@ -10,7 +10,7 @@ import MediaModal from '../../modal/presentational/media-modal';
 import HandleError from '../../errors/container/handle-error';
 import VideoPlayer from '../../video-player/container/video-player';
 
-class Home extends Component {ç
+class Home extends Component {
   // States
   state = {
     modalVisible: false,
@@ -39,7 +39,7 @@ class Home extends Component {ç
         <HomeLayout>
           <Related />
           <Categories
-            categories={categories}
+            categories={this.props.categories}
             handleClick={this.handleOpenModal}
           />
           { this.state.modalVisible && <Modal>
@@ -58,4 +58,10 @@ class Home extends Component {ç
   }
 }
 
-export default Home;
+function mapStateToProps(state, props) {
+  return {
+    categories: state.data.categories
+  };
+}
+
+export default connect(mapStateToProps)(Home);
