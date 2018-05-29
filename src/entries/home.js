@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import data from '../api.json';
 import Home from '../pages/container/home';
 import reducer from '../reducers/data';
 import normalizedData from '../schemas';
@@ -10,7 +9,10 @@ import normalizedData from '../schemas';
 const homeContainer = document.getElementById('home-container');
 
 const initialState = {
-  data: { ...data },
+  data: {
+    entities: normalizedData.entities,
+    categories: normalizedData.result
+  },
   search: [],
 };
 
