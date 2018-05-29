@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import data from '../api.json';
 import Home from '../pages/container/home';
 import reducer from '../reducers/data';
+import normalizedData from '../schemas';
 
 const homeContainer = document.getElementById('home-container');
 
