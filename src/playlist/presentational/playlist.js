@@ -1,20 +1,22 @@
 import React from 'react';
-import Media from './media';
+import MediaContainer from '../container/media-container';
 import './playlist.css';
 
 // Functional component: No lifecycle.
 function Playlist(props) {
-  return <div className="Playlist">
-    <div>
-      {props.playlist.map((media) => {
-        return <Media
-          {...media}
-          handleClick={props.handleClick}
-          key={media.id}
-        />
-      })}
+  return (
+    <div className="Playlist">
+      <div>
+        {props.playlist.map((mediaFileId) => {
+          return <MediaContainer
+            id={mediaFileId}
+            key={mediaFileId}
+            handleClick={props.handleClick}
+          />
+        })}
+      </div>
     </div>
-  </div>;
+  );
 }
 
 export default Playlist;
