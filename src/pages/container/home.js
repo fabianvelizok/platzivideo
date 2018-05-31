@@ -60,11 +60,14 @@ class Home extends Component {
 }
 
 function mapStateToProps(state, props) {
-  const categories = state.data.categories.map(id => state.data.entities.categories[id]);
+  // const categories = state.data.categories.map(id => state.data.entities.categories[id]);
+  const categories = state.getIn(['data', 'categories']).map((id) => {
+    return state.getIn(['data', 'entities', 'categories', id]);
+  });
 
   return {
     categories,
-    search: state.search
+    search: state.getIn(['data', 'search']),
   };
 }
 

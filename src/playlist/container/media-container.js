@@ -5,14 +5,14 @@ import Media from '../presentational/media';
 class MediaContainer extends Component {
   render() {
     return (
-      <Media {...this.props.data} />
+      <Media {...this.props.data.toJS()} />
     );
   }
 }
 
 function mapStateToProps(state, props) {
   return {
-    data: state.data.entities.mediaFiles[props.id],
+    data: state.getIn(['data', 'entities', 'mediaFiles', props.id]),
   };
 }
 

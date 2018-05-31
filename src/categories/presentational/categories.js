@@ -13,7 +13,7 @@ function Categories(props) {
         props.search.length > 0 && <div className="searchResults">
           {
             props.search.map((item) => {
-              return <Media {...item} key={item.id} />
+              return <Media {...item.toJS()} key={item.get('id')} />
             })
           }
         </div>
@@ -22,8 +22,8 @@ function Categories(props) {
       {
         props.categories.map((category) => {
           return <Category
-            {...category}
-            key={category.id}
+            {...category.toJS()}
+            key={category.get('id')}
             handleClick={props.handleClick}
           />
         })

@@ -3,22 +3,14 @@ import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Home from '../pages/container/home';
-import reducer from '../reducers/data';
-import normalizedData from '../schemas';
+import rootReducer from '../reducers';
+import { Map } from 'immutable';
 
 const homeContainer = document.getElementById('home-container');
 
-const initialState = {
-  data: {
-    entities: normalizedData.entities,
-    categories: normalizedData.result
-  },
-  search: [],
-};
-
 const store = createStore(
-  reducer,
-  initialState,
+  rootReducer,
+  Map(),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
