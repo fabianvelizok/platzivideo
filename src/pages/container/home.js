@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { List } from 'immutable';
 
 // Components
 import HomeLayout from '../presentational/home-layout';
@@ -60,14 +61,27 @@ class Home extends Component {
 }
 
 function mapStateToProps(state, props) {
-  // const categories = state.data.categories.map(id => state.data.entities.categories[id]);
   const categories = state.getIn(['data', 'categories']).map((id) => {
     return state.getIn(['data', 'entities', 'categories', id]);
   });
 
+  let search = List();
+  const query = state.getIn(['data', 'search']);
+
+  if (query) {
+    const mediaFiles = state.getIn(['data', 'entities', 'mediaFiles']);
+
+    search = mediaFiles
+      .filter((item) => {
+        return item.get('title').toLowerCase().includes(query) ||
+          item.get('author').toLowerCase().includes(query);
+      })
+      .toList();
+  }
+
   return {
     categories,
-    search: state.getIn(['data', 'search']),
+    search,
   };
 }
 

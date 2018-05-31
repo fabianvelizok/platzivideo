@@ -10,7 +10,7 @@ function Categories(props) {
       <Search />
 
       {
-        props.search.length > 0 && <div className="searchResults">
+        props.search.size > 0 && <div className="searchResults">
           {
             props.search.map((item) => {
               return <Media {...item.toJS()} key={item.get('id')} />
