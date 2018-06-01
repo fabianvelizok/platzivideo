@@ -1,20 +1,26 @@
+import {
+  OPEN_MODAL,
+  CLOSE_MODAL,
+  SEARCH_MEDIA,
+} from '../action-types';
+
 export function openModal(mediaId) {
   return {
-    type: 'OPEN_MODAL',
+    type: OPEN_MODAL,
     payload: { mediaId },
   };
 }
 
 export function closeModal() {
   return {
-    type: 'CLOSE_MODAL',
+    type: CLOSE_MODAL,
     payload: {}
   };
 }
 
 export function searchMedia(query) {
   return {
-    type: 'SEARCH_MEDIA',
+    type: SEARCH_MEDIA,
     payload: {
       query
     }

@@ -10,9 +10,7 @@ class Search extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // When we connect, react-redux expose the
-    // 'dispatch' method as a prop.
-    this.props.dispatch(searchMedia(this.input.value));
+    this.props.searchMedia(this.input.value);
   }
 
   render() {
@@ -27,4 +25,9 @@ class Search extends Component {
   }
 }
 
-export default connect()(Search);
+// We avoid calling the 'dispatch' method and importing the 'bindActionCreators' dependency on this way.
+const mapDispatchToProps = {
+  searchMedia,
+};
+
+export default connect(null, mapDispatchToProps)(Search);

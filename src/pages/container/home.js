@@ -20,7 +20,7 @@ class Home extends Component {
   };
 
   handleCloseModal = () => {
-    this.props.dispatch(closeModal());
+    this.props.closeModal();
   }
 
   // Lifecycle
@@ -77,4 +77,8 @@ function mapStateToProps(state, props) {
   };
 }
 
-export default connect(mapStateToProps)(Home);
+const mapDispatchToProps = {
+  closeModal,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

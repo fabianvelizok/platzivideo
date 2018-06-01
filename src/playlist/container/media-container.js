@@ -4,14 +4,14 @@ import Media from '../presentational/media';
 import { openModal } from '../../actions';
 
 class MediaContainer extends Component {
-  openModal = (mediaId) => {
-    this.props.dispatch(openModal(mediaId));
+  handleOpenModal = (mediaId) => {
+    this.props.openModal(mediaId);
   };
 
   render() {
     return (
       <Media
-        openModal={this.openModal}
+        handleOpenModal={this.handleOpenModal}
         {...this.props.data.toJS()} />
     );
   }
@@ -23,4 +23,8 @@ function mapStateToProps(state, props) {
   };
 }
 
-export default connect(mapStateToProps)(MediaContainer);
+const mapDispatchToProps = {
+  openModal,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MediaContainer);

@@ -5,7 +5,7 @@ import './media.css';
 // Pure component: If props are different, then re-render it.
 class Media extends PureComponent {
   handleMediaClick = () => {
-    return this.props.openModal(this.props.id);
+    return this.props.handleOpenModal(this.props.id);
   }
   render() {
     const { cover, title, author, handleClick } = this.props;
