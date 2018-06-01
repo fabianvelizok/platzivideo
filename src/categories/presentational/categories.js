@@ -1,7 +1,7 @@
 import React from 'react';
 import Category from './category';
 import Search from '../../search/container/search';
-import Media from '../../playlist/presentational/media';
+import MediaContainer from '../../playlist/container/media-container';
 import './categories.css';
 
 function Categories(props) {
@@ -13,7 +13,10 @@ function Categories(props) {
         props.search.size > 0 && <div className="searchResults">
           {
             props.search.map((item) => {
-              return <Media {...item.toJS()} key={item.get('id')} />
+              return <MediaContainer
+                id={item.get('id')}
+                key={item.get('id')}
+              />
             })
           }
         </div>
