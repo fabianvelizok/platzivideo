@@ -19,9 +19,10 @@ class Home extends Component {
   };
 
   handleCloseModal = () => {
-    // this.setState({
-    //   modalVisible: false,
-    // });
+    this.props.dispatch({
+      type: 'CLOSE_MODAL',
+      payload: {}
+    });
   }
 
   // Lifecycle
