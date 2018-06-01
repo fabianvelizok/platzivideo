@@ -8,11 +8,17 @@ const initialState = fromJS({
 function modal(state = initialState, action) {
   switch(action.type) {
     case 'OPEN_MODAL':
-      return state
+      return state.merge({
+        visible: true,
+        mediaId: action.payload.mediaId,
+      });
     case 'CLOSE_MODAL':
-      return state
+      return state.merge({
+        visible: false,
+        mediaId: null,
+      });
     default:
-      return state
+      return state;
   }
 }
 
