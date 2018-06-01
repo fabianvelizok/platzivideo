@@ -10,6 +10,7 @@ import Modal from '../../modal/container/modal';
 import MediaModal from '../../modal/presentational/media-modal';
 import HandleError from '../../errors/container/handle-error';
 import VideoPlayer from '../../video-player/container/video-player';
+import { closeModal } from '../../actions';
 
 class Home extends Component {
   // States
@@ -19,10 +20,7 @@ class Home extends Component {
   };
 
   handleCloseModal = () => {
-    this.props.dispatch({
-      type: 'CLOSE_MODAL',
-      payload: {}
-    });
+    this.props.dispatch(closeModal());
   }
 
   // Lifecycle
