@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Map, List } from 'immutable';
+import { List } from 'immutable';
 
 // Components
 import HomeLayout from '../presentational/home-layout';
@@ -18,14 +18,6 @@ class Home extends Component {
     media: {},
   };
 
-  // Functions
-  handleOpenModal = (media) => {
-    // this.setState({
-    //   modalVisible: true,
-    //   media,
-    // });
-  }
-
   handleCloseModal = () => {
     // this.setState({
     //   modalVisible: false,
@@ -41,15 +33,14 @@ class Home extends Component {
           <Related />
           <Categories
             categories={this.props.categories}
-            handleClick={this.handleOpenModal}
             search={this.props.search}
           />
-          {this.props.modalVisible && <Modal>
+          {this.props.modal.get('visible') && <Modal>
               <MediaModal
                 handleClick={this.handleCloseModal}
               >
                 <VideoPlayer
-                  media={this.props.media}
+                  mediaId={this.props.modal.get('mediaId')}
                 />
               </MediaModal>
             </Modal>
@@ -65,12 +56,11 @@ function mapStateToProps(state, props) {
     return state.getIn(['data', 'entities', 'categories', id]);
   });
 
-  const mediaFiles = state.getIn(['data', 'entities', 'mediaFiles']);
-
   let search = List();
   const query = state.getIn(['data', 'search']);
 
   if (query) {
+    const mediaFiles = state.getIn(['data', 'entities', 'mediaFiles']);
     search = mediaFiles
       .filter((item) => {
         return item.get('title').toLowerCase().includes(query) ||
@@ -80,22 +70,11 @@ function mapStateToProps(state, props) {
   }
 
   const modal = state.get('modal');
-  const mediaId = modal.get('mediaId');
-  const modalVisible = modal.get('visible');
-
-  let media = Map();
-
-  if (mediaId) {
-    const mediaMap = mediaFiles.filter(item => item.get('id') === mediaId);
-    media = mediaMap.toJS()[mediaId];
-  }
 
   return {
     categories,
     search,
     modal,
-    media,
-    modalVisible,
   };
 }
 

@@ -24,7 +24,6 @@ function Categories(props) {
           return <Category
             {...category.toJS()}
             key={category.get('id')}
-            handleClick={props.handleClick}
           />
         })
       }

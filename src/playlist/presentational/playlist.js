@@ -11,7 +11,6 @@ function Playlist(props) {
           return <MediaContainer
             id={mediaFileId}
             key={mediaFileId}
-            handleClick={props.handleClick}
           />
         })}
       </div>
