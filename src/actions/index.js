@@ -19,10 +19,15 @@ export function closeModal() {
 }
 
 export function searchMedia(query) {
-  return {
-    type: SEARCH_MEDIA,
-    payload: {
-      query
-    }
-  };
+  return (dispatch) => {
+    // Fake async function.
+    setTimeout(() => {
+      dispatch({
+        type: SEARCH_MEDIA,
+        payload: {
+          query
+        }
+      });
+    }, 2000);
+  }
 }
