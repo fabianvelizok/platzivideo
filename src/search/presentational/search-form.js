@@ -13,6 +13,7 @@ const SearchForm = (props) => (
         name="search"
         ref={props.handleRef}
         type="text"
+        autocomplete="off"
       />
     </form>
   </div>
