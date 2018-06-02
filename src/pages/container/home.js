@@ -10,6 +10,7 @@ import Modal from '../../modal/container/modal';
 import MediaModal from '../../modal/presentational/media-modal';
 import HandleError from '../../errors/container/handle-error';
 import VideoPlayer from '../../video-player/container/video-player';
+import Spinner from '../../spinner/presentational/spinner';
 import { closeModal } from '../../actions';
 
 class Home extends Component {
@@ -29,6 +30,7 @@ class Home extends Component {
     return (
       <HandleError>
         <HomeLayout>
+          <Spinner show={this.props.spinner.get('show')}/>
           <Related />
           <Categories
             categories={this.props.categories}
@@ -69,11 +71,13 @@ function mapStateToProps(state, props) {
   }
 
   const modal = state.get('modal');
+  const spinner = state.get('spinner');
 
   return {
     categories,
     search,
     modal,
+    spinner,
   };
 }
 

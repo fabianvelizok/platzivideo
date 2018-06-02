@@ -2,6 +2,8 @@ import {
   OPEN_MODAL,
   CLOSE_MODAL,
   SEARCH_MEDIA,
+  SHOW_SPINNER,
+  HIDE_SPINNER,
 } from '../action-types';
 
 export function openModal(mediaId) {
@@ -14,12 +16,12 @@ export function openModal(mediaId) {
 export function closeModal() {
   return {
     type: CLOSE_MODAL,
-    payload: {}
   };
 }
 
 export function searchMedia(query) {
   return (dispatch) => {
+    dispatch(showSpinner());
     // Fake async function.
     setTimeout(() => {
       dispatch({
@@ -28,6 +30,20 @@ export function searchMedia(query) {
           query
         }
       });
+
+      dispatch(hideSpinner());
     }, 2000);
   }
+}
+
+export function showSpinner() {
+  return {
+    type: SHOW_SPINNER,
+  };
+}
+
+export function hideSpinner() {
+  return {
+    type: HIDE_SPINNER,
+  };
 }

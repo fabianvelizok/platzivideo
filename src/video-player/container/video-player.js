@@ -97,7 +97,7 @@ class VideoPlayer extends Component {
         <VideoTitle
           title={this.props.media.get('title')}
         />
-        <Spinner loading={this.state.loading} />
+        <Spinner show={this.state.loading} />
         <Controls>
           <PlayPause
             pause={this.state.pause}

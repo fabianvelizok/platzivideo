@@ -2,8 +2,11 @@ import React from 'react';
 import './spinner.css';
 
 const Spinner = (props) => (
-  <div className="Spinner">
-    { props.loading && <span>Loading...</span> }
+  <div>
+    { props.show && <div className="Spinner">
+        <span className="Loader"></span>
+      </div>
+    }
   </div>
 );
 
