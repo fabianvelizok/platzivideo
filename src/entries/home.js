@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import Home from '../pages/container/home';
 import rootReducer from '../reducers';
 import { Map } from 'immutable';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 // Middlewares
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -22,8 +23,11 @@ const store = createStore(
 );
 
 render(
+
   <Provider store={store}>
-    <Home />
+    <BrowserRouter>
+      <Route path="/" component={Home}></Route>
+    </BrowserRouter>
   </Provider>
   , homeContainer
 );
