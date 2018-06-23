@@ -1,6 +1,6 @@
-# Platzivideo
+# PVP
 
-> A video player built on [React](https://reactjs.org/).
+> A pro video player built on [React](https://reactjs.org/).
 
 ## Build Setup
 Make sure that you have installed:

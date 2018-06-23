@@ -1,8 +1,8 @@
 {
-  "name": "platzivideo",
+  "name": "pvp",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:fabianvelizok/platzivideo.git",
+  "repository": "git@github.com:fabianvelizok/pvp.git",
   "author": "Fabián Veliz <velizfabianhoracio@gmail.com>",
   "license": "MIT",
   "private": false,
