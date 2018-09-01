@@ -3,9 +3,15 @@ import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import Home from '../pages/container/home';
+import About from '../pages/presentational/about';
+
 import rootReducer from '../reducers';
 import { Map } from 'immutable';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
 
 // Middlewares
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -25,9 +31,12 @@ const store = createStore(
 render(
 
   <Provider store={store}>
-    <BrowserRouter>
-      <Route path="/" component={Home}></Route>
-    </BrowserRouter>
+    <Router>
+      <Switch>
+        <Route exact strict path="/" component={Home} />
+        <Route exact strict path="/about" component={About} />
+      </Switch>
+    </Router>
   </Provider>
   , homeContainer
 );

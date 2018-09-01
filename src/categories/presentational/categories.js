@@ -2,11 +2,15 @@ import React from 'react';
 import Category from './category';
 import Search from '../../search/container/search';
 import MediaContainer from '../../playlist/container/media-container';
+import Navbar from '../../pages/presentational/navbar';
+
 import './categories.css';
 
 function Categories(props) {
   return (
     <div className="Categories">
+      <Navbar />
+
       <Search />
 
       {
