@@ -1,3 +1,5 @@
+@import '../../styles/variables.css';
+
 .Media {
   cursor: pointer;
   margin-right: 15px;
@@ -7,7 +9,7 @@
 }
 
 .Media:hover .Media-title {
-  color: #171c30;
+  color: var(--primary-color);
 }
 
 .Media:hover .Media-cover {
