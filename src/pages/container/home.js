@@ -30,12 +30,12 @@ class Home extends Component {
     return (
       <HandleError>
         <HomeLayout>
-          <Spinner show={this.props.spinner.get('show')}/>
           <Related />
           <Categories
             categories={this.props.categories}
             search={this.props.search}
           />
+          <Spinner show={this.props.spinner.get('show')}/>
           {this.props.modal.get('visible') && <Modal>
               <MediaModal
                 handleClick={this.handleCloseModal}

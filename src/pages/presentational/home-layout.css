@@ -1,11 +1,17 @@
+@import '../../styles/variables.css';
+
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: system-ui;
 }
 
 .HomeLayout {
-  background: #171c30;
-  display: flex;
-  margin: 0 auto;
+  background: var(--primary-color);
+  display: grid;
+  grid-template-columns: 300px 1fr;
   min-height: 100vh;
+
+  @media (--viewport-medium) {
+    grid-template-columns: auto;
+  }
 }

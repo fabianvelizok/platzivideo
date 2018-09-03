@@ -1,3 +1,5 @@
 :root {
   --primary-color: #171c30;
 }
+
+@custom-media --viewport-medium (width <= 50rem);
