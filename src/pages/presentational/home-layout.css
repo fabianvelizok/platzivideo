@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: system-ui;
+  font-family: 'Ubuntu', system-ui;
 }
 
 .HomeLayout {
@@ -14,4 +14,8 @@ body {
   @media (--viewport-medium) {
     grid-template-columns: auto;
   }
+}
+
+:--headings {
+  color: var(--gray);
 }
