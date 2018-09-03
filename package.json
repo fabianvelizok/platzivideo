@@ -36,6 +36,7 @@
   "dependencies": {
     "autoprefixer": "^9.1.3",
     "babel-preset-stage-2": "^6.24.1",
+    "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.0",
     "immutable": "^3.8.2",
     "normalizr": "^3.2.4",
