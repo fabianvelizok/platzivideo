@@ -1,1 +1,9 @@
-.Related {}
+.Related {
+  & .playlist-heading {
+    color: white;
+  }
+
+  & .playlist :any-link:hover {
+    color: white;
+  }
+}
