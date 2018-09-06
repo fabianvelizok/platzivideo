@@ -1,0 +1,13 @@
+/* FIXME: Fix alias. */
+
+.Logo {
+  background-image: image-set(
+    url('../../../static/images/platzi-video.png') 1x,
+    url('../../../static/images/platzi-video-2x.png') 2x,
+    url('../../../static/images/platzi-video-3x.png') 3x
+  );
+  background-size: cover;
+  display: block;
+  height: 45px;
+  width: 160px;
+}

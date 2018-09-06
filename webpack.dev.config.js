@@ -59,5 +59,17 @@ module.exports = {
         return module.context && module.context.includes("node_modules");
       }
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, 'src/components/'),
+      Entries: path.resolve(__dirname, 'src/entries/'),
+      Pages: path.resolve(__dirname, 'src/pages/'),
+      Schemas: path.resolve(__dirname, 'src/schemas/'),
+      State: path.resolve(__dirname, 'src/state/'),
+      Static: path.resolve(__dirname, 'src/static/'),
+      Styles: path.resolve(__dirname, 'src/styles/'),
+      Utils: path.resolve(__dirname, 'src/utils/')
+    }
+  }
 }

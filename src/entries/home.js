@@ -1,22 +1,16 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
-import Home from '../pages/container/home';
-import About from '../pages/presentational/about';
-
-import rootReducer from '../reducers';
-import { Map } from 'immutable';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom';
-
-// Middlewares
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore, applyMiddleware } from 'redux';
+import { Map } from 'immutable';
+import { Provider } from 'react-redux';
+import { render } from 'react-dom';
 import logger from 'redux-logger';
+import React from 'react';
 import thunk from 'redux-thunk';
+
+import About from 'Pages/presentational/about';
+import Home from 'Pages/container/home';
+import rootReducer from 'State/reducers';
 
 const homeContainer = document.getElementById('home-container');
 

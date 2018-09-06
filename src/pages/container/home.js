@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { List } from 'immutable';
+import React, { Component } from 'react';
 
-// Components
-import HomeLayout from '../presentational/home-layout';
-import Categories from '../../categories/presentational/categories';
-import Related from '../../related/presentational/related';
-import Modal from '../../modal/container/modal';
-import MediaModal from '../../modal/presentational/media-modal';
-import HandleError from '../../errors/container/handle-error';
-import VideoPlayer from '../../video-player/container/video-player';
-import Spinner from '../../spinner/presentational/spinner';
-import { closeModal } from '../../actions';
+import { closeModal } from 'State/actions';
+import Categories from 'Components/categories/presentational/categories';
+import HandleError from 'Components/errors/container/handle-error';
+import HomeLayout from 'Pages/presentational/home-layout';
+import MediaModal from 'Components/modal/presentational/media-modal';
+import Modal from 'Components/modal/container/modal';
+import Related from 'Components/related/presentational/related';
+import Spinner from 'Components/spinner/presentational/spinner';
+import VideoPlayer from 'Components/video-player/container/video-player';
 
 class Home extends Component {
   // States
