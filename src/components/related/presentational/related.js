@@ -10,7 +10,7 @@ function Related(props) {
       <Logo />
 
       <div className="playlist">
-        <h2 class="playlist-heading">My Playlist</h2>
+        <h2 className="playlist-heading">My Playlist</h2>
         <ol>
           <li>
             <a href="#">

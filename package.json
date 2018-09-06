@@ -8,8 +8,8 @@
   "private": false,
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack.dev.config.js",
-    "local": "webpack --env.NODE_ENV=local",
-    "prod": "webpack -p --env.NODE_ENV=production"
+    "local": "webpack --config ./webpack.prod.config.js",
+    "prod": "webpack -p --config ./webpack.prod.config.js"
   },
   "engines": {
     "node": ">=8.11.1",
@@ -51,6 +51,7 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-immutable": "^4.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "webpack-merge": "^4.1.4"
   }
 }

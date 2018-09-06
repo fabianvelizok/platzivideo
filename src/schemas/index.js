@@ -1,5 +1,5 @@
 import { normalize, schema } from 'normalizr';
-import fakeApi from '../api.json';
+import fakeApi from '../api.js';
 
 const media = new schema.Entity('mediaFiles', {}, {
   processStrategy: (media, parent, key) => ({

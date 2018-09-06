@@ -1,4 +1,6 @@
-{
+const ASSET_PATH = process.env.ASSET_PATH || '/src/static/';
+
+module.exports = {
   "categories": [
     {
       "id": "1",
@@ -9,7 +11,7 @@
           "title": "¿Qué es responsive Design?",
           "author": "LeonidasEsteban",
           "type": "video",
-          "cover": "/src/static/images/covers/responsive.jpg",
+          "cover": `${ASSET_PATH}/images/responsive.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "1"
         },
@@ -17,7 +19,7 @@
           "title": "Cómo optimzar la carga de un website",
           "author": "LeonidasEsteban",
           "type": "video",
-          "cover": "/src/static/images/covers/optimizar.jpg",
+          "cover": `${ASSET_PATH}/images/optimizar.jpg`,
           "src": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
           "id": "2"
         },
@@ -25,7 +27,7 @@
           "title": "Qué es Bitcoin",
           "author": "Yograterol",
           "type": "video",
-          "cover": "/src/static/images/covers/bitcoin.jpg",
+          "cover": `${ASSET_PATH}/images/bitcoin.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "3"
         },
@@ -33,7 +35,7 @@
           "title": "Que pasó con HTML5",
           "author": "Freddier",
           "type": "video",
-          "cover": "/src/static/images/covers/html5.jpg",
+          "cover": `${ASSET_PATH}/images/html5.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "4"
         },
@@ -41,7 +43,7 @@
           "title": "Lo mejor de Mejorando.la",
           "author": "Cvander",
           "type": "video",
-          "cover": "/src/static/images/covers/mejorandola.jpg",
+          "cover": `${ASSET_PATH}/images/mejorandola.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "5"
         }
@@ -56,7 +58,7 @@
           "title": "One more time",
           "author": "Daft Punk",
           "type": "video",
-          "cover": "/src/static/images/covers/one-more-time.jpg",
+          "cover": `${ASSET_PATH}/images/one-more-time.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "6"
         },
@@ -64,7 +66,7 @@
           "title": "Midnight City",
           "author": "M83",
           "type": "video",
-          "cover": "/src/static/images/covers/midnight.jpg",
+          "cover": `${ASSET_PATH}/images/midnight.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "7"
         },
@@ -72,7 +74,7 @@
           "title": "Solar Sailer",
           "author": "Daft Punk",
           "type": "video",
-          "cover": "/src/static/images/covers/solar-sailer.jpg",
+          "cover": `${ASSET_PATH}/images/solar-sailer.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "8"
         },
@@ -80,7 +82,7 @@
           "title": "The social network",
           "author": "The social network",
           "type": "video",
-          "cover": "/src/static/images/covers/social.jpg",
+          "cover": `${ASSET_PATH}/images/social.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "9"
         },
@@ -88,7 +90,7 @@
           "title": "No vaya a ser",
           "author": "Pablo Alboran",
           "type": "video",
-          "cover": "/src/static/images/covers/no-vaya-a-ser.jpg",
+          "cover": `${ASSET_PATH}/images/no-vaya-a-ser.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "10"
         }
@@ -103,7 +105,7 @@
           "title": "Despacito",
           "author": "Luis Fonsi",
           "type": "video",
-          "cover": "/src/static/images/covers/despacito.jpg",
+          "cover": `${ASSET_PATH}/images/despacito.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "11"
         },
@@ -111,7 +113,7 @@
           "title": "Echame la culpa",
           "author": "Luis fonsi",
           "type": "video",
-          "cover": "/src/static/images/covers/echame-la-culpa.jpg",
+          "cover": `${ASSET_PATH}/images/echame-la-culpa.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "12"
         },
@@ -119,7 +121,7 @@
           "title": "Mi Gente",
           "author": "J Bavil",
           "type": "video",
-          "cover": "/src/static/images/covers/mi-gente.jpg",
+          "cover": `${ASSET_PATH}/images/mi-gente.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "13"
         },
@@ -127,7 +129,7 @@
           "title": "Felices los 4",
           "author": "Maluma",
           "type": "video",
-          "cover": "/src/static/images/covers/felices.jpg",
+          "cover": `${ASSET_PATH}/images/felices.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "14"
         },
@@ -135,7 +137,7 @@
           "title": "Me Rehúso",
           "author": "Danny Ocean",
           "type": "video",
-          "cover": "/src/static/images/covers/rehuso.jpg",
+          "cover": `${ASSET_PATH}/images/rehuso.jpg`,
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": "15"
         }
