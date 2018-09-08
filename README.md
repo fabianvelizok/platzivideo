@@ -5,14 +5,14 @@
 ## Build Setup
 Make sure that you have installed:
 - [Yarn](https://yarnpkg.com/en/docs/install#debian-stable). Version >= 1.6.0.
-- [Node.js](https://nodejs.org/). Version >= 8.11.1.
+- [Node.js](https://nodejs.org/). Version >= 8.11.2.
 
 ``` bash
 # Install dependencies
 yarn
 
-# Serve at localhost:9000
-yarn buil:dev
+# Development server
+yarn dev
 
-# Build for production
-yarn build
+# Build app for production
+yarn prod
