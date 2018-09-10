@@ -8,9 +8,6 @@ const webpack = require('webpack');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-  entry: {
-    home: path.resolve(__dirname, 'src/entries/home.js'),
-  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[hash].js',

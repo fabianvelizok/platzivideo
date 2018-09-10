@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import { searchMedia } from 'State/actions';
-import SearchForm from 'Components/Search/presentational/search-form';
+import SearchForm from 'Components/search/presentational/search-form'
 
 class Search extends Component {
   handleRef = (element) => {
