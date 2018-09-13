@@ -11,7 +11,7 @@ import Timer from 'Components/timer/presentational/timer';
 import Video from 'Components/video-player/presentational/video';
 import VideoPlayerLayout from 'Components/video-player/presentational/video-player-layout';
 import VideoTitle from 'Components/video-player/presentational/video-title';
-import Volume from 'Components/volume/presentational/volume';
+import Volume from 'Components/Volume/Volume';
 
 class VideoPlayer extends Component {
   state = {

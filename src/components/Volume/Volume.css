@@ -1,0 +1,39 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.volume {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  outline: 0;
+  padding: 0 15px;
+  position: relative;
+}
+
+.volume__button {
+  background: transparent;
+  border: none;
+}
+
+.volume__range {
+  background: var(--dark-gray);
+  border-radius: 0 20px 20px 0;
+  bottom: 50px;
+  display: none;
+  height: 50px;
+  left: 57px;
+  padding-right: 20px;
+  position: absolute;
+  transform-origin: left bottom;
+  transform: rotate(-90deg);
+}
+
+.volume__input {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  cursor: grab;
+}
+
+.volume:hover .volume__range {
+  display: flex;
+}

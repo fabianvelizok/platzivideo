@@ -17,5 +17,5 @@ body {
 }
 
 :--headings {
-  color: var(--gray);
+  color: var(--default-gray);
 }

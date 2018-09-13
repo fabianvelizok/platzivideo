@@ -1,6 +1,6 @@
 import Play from './play';
 import Pause from './pause';
-import Volume from './volume';
+import Volume from './Volume';
 import FullScreen from './FullScreen';
 
 export {
