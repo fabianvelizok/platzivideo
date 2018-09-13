@@ -1,0 +1,8 @@
+.full-screen {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  padding: 0 10px;
+}
