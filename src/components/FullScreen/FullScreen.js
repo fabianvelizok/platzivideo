@@ -20,7 +20,7 @@ const FullScreen = (props) => (
 FullScreen.propTypes = {
   color: PropTypes.string,
   handleClick: PropTypes.func,
-  size: PropTypes.string
+  size: PropTypes.number
 };
 
 FullScreen.defaultProps = {

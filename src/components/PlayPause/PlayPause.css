@@ -1,0 +1,11 @@
+.play-pause {
+  background: transparent;
+  border: none;
+  box-sizing: none;
+  cursor: pointer;
+  font-size: 30px;
+  height: inherit;
+  outline: 0;
+  padding: 0;
+  width: inherit;
+}

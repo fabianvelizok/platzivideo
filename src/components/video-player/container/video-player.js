@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { formatTime } from 'Utils/list';
 import Controls from 'Components/video-player-controls/presentational/video-player-controls';
 import FullScreen from 'Components/FullScreen/FullScreen';
-import PlayPause from 'Components/play-pause/presentational/play-pause';
+import PlayPause from 'Components/PlayPause/PlayPause';
 import ProgressBar from 'Components/progress-bar/presentational/progress-bar';
 import Spinner from 'Components/spinner/presentational/spinner';
 import Timer from 'Components/timer/presentational/timer';
