@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { FullScreen as FullScreenIcon } from 'Components/icons/presentational/list';
+import { FullScreen as FullScreenIcon } from 'Components/Icons';
 
 import './FullScreen.css';
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Play, Pause } from 'Components/icons/presentational/list';
+import { Play, Pause } from 'Components/Icons';
 
 import './PlayPause.css';
 
