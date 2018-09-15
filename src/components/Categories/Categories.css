@@ -1,0 +1,13 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.categories {
+  background: var(--white);
+  overflow: hidden;
+  padding: 20px 0 20px 20px;
+}
+
+.categories__search-results {
+  margin-bottom: 80px;
+}
+

@@ -1,0 +1,19 @@
+.category {
+  margin-bottom: 1em;
+}
+
+.category__title {
+  color: #3f546c;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.category__description {
+  color: #888b8e;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+}

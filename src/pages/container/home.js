@@ -3,7 +3,7 @@ import { List } from 'immutable';
 import React, { Component } from 'react';
 
 import { closeModal } from 'State/actions';
-import Categories from 'Components/categories/presentational/categories';
+import Categories from 'Components/Categories/Categories';
 import HandleError from 'Components/errors/container/handle-error';
 import HomeLayout from 'Pages/presentational/home-layout';
 import MediaModal from 'Components/modal/presentational/media-modal';
