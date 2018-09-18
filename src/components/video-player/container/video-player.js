@@ -7,7 +7,7 @@ import FullScreen from 'Components/FullScreen/FullScreen';
 import PlayPause from 'Components/PlayPause/PlayPause';
 import ProgressBar from 'Components/progress-bar/presentational/progress-bar';
 import Spinner from 'Components/spinner/presentational/spinner';
-import Timer from 'Components/timer/presentational/timer';
+import Timer from 'Components/Timer/Timer';
 import Video from 'Components/video-player/presentational/video';
 import VideoPlayerLayout from 'Components/video-player/presentational/video-player-layout';
 import VideoTitle from 'Components/video-player/presentational/video-title';
