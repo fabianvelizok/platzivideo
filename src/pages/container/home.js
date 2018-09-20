@@ -9,7 +9,7 @@ import HomeLayout from 'Pages/presentational/home-layout';
 import MediaModal from 'Components/modal/presentational/media-modal';
 import Modal from 'Components/modal/container/modal';
 import Related from 'Components/related/presentational/related';
-import Spinner from 'Components/spinner/presentational/spinner';
+import Spinner from 'Components/Spinner/Spinner';
 import VideoPlayer from 'Components/video-player/container/video-player';
 
 class Home extends Component {
