@@ -6,8 +6,8 @@ import { closeModal } from 'State/actions';
 import Categories from 'Components/Categories/Categories';
 import HandleError from 'Components/errors/container/handle-error';
 import HomeLayout from 'Pages/presentational/home-layout';
-import MediaModal from 'Components/modal/presentational/media-modal';
-import Modal from 'Components/modal/container/modal';
+import ModalMedia from 'Components/ModalMedia/ModalMedia';
+import ModalContainer from 'Components/Modal/Modal.container';
 import Related from 'Components/related/presentational/related';
 import Spinner from 'Components/Spinner/Spinner';
 import VideoPlayer from 'Components/video-player/container/video-player';
@@ -35,16 +35,17 @@ class Home extends Component {
             search={this.props.search}
           />
           <Spinner show={this.props.spinner.get('show')}/>
-          {this.props.modal.get('visible') && <Modal>
-              <MediaModal
+          {this.props.modal.get('visible') && (
+            <ModalContainer>
+              <ModalMedia
                 handleClick={this.handleCloseModal}
               >
                 <VideoPlayer
                   mediaId={this.props.modal.get('mediaId')}
                 />
-              </MediaModal>
-            </Modal>
-          }
+              </ModalMedia>
+            </ModalContainer>
+          )}
         </HomeLayout>
       </HandleError>
     );

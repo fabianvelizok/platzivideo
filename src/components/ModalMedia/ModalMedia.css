@@ -1,0 +1,31 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.modal-media {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 0 10px var(--dark-gray);
+  left: 0;
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 100%;
+}
+
+.modal-media__close {
+  --close-button-size: 50px;
+
+  background: var(--primary-color);
+  border-radius: var(--primary-color);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  height: var(--close-button-size);
+  position: absolute;
+  right: calc(var(--close-button-size) / 2 * -1);
+  top: calc(var(--close-button-size) / 2 * -1);
+  width: var(--close-button-size);
+}

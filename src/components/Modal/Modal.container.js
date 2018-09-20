@@ -1,11 +1,11 @@
 import { createPortal } from 'react-dom';
 import React, { Component } from 'react';
 
-class Modal extends Component {
+class modalContainer extends Component {
   render() {
     const modalContainer = document.getElementById('modal-container');
     return createPortal(this.props.children, modalContainer);
   }
 }
 
-export default Modal;
+export default modalContainer;
