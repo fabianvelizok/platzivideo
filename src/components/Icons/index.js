@@ -1,5 +1,5 @@
-import Play from './play';
-import Pause from './pause';
+import Play from './Play';
+import Pause from './Pause';
 import Volume from './Volume';
 import FullScreen from './FullScreen';
 
