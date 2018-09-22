@@ -15,11 +15,17 @@ const Categories = props => {
     <Fragment>
       {
         !!search.size && (
-          <div className="categories__search-results">
-            {
-              search.map(item => <MediaContainer id={item.get('id')} key={item.get('id')} />)
-            }
-          </div>
+          <ul className="categories__search-results">
+            {search.map(item => {
+              const id = item.get('id');
+
+              return (
+                <li key={id}>
+                  <MediaContainer id={id} />
+                </li>
+              );
+            })}
+          </ul>
         )
       }
     </Fragment>

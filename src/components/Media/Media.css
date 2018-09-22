@@ -3,8 +3,8 @@
 
 .media {
   cursor: pointer;
+  padding: 10px 0;
   vertical-align: top;
-  width: 260px;
 }
 
 .media:hover .media__title {
@@ -16,9 +16,10 @@
 }
 
 .media__cover {
-  transition: .3s;
   box-shadow: 0 0 5px var(--primary-color);
   height: 160px;
+  margin: 0;
+  transition: .3s;
 }
 
 .media__image {
@@ -26,8 +27,8 @@
 }
 
 .media__title {
-  margin: 5px 0 0 0;
   color: #44546b;
+  margin: 5px 0 0 0;
   white-space: normal;
 }
 

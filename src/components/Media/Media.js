@@ -14,10 +14,8 @@ class Media extends PureComponent {
     const { cover, title, author, handleClick } = this.props;
 
     return (
-      <div className="media"
-           onClick={this.handleMediaClick}
-      >
-        <div className="media__cover">
+      <div className="media" onClick={this.handleMediaClick}>
+        <figure className="media__cover">
           <img
             className="media__image"
             src={cover}
@@ -25,9 +23,9 @@ class Media extends PureComponent {
             width="260"
             height="160"
           />
-          <h3 className="media__title">{title}</h3>
-          <p className="media__author">{author}</p>
-        </div>
+        </figure>
+        <h3 className="media__title">{title}</h3>
+        <p className="media__author">{author}</p>
       </div>
     )
   }
