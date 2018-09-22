@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Playlist from 'Components/playlist/presentational/playlist';
+import Playlist from 'Components/Playlist/Playlist';
 
 import './Category.css';
 

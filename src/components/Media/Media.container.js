@@ -2,10 +2,10 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import { openModal } from 'State/actions';
-import Media from 'Components/playlist/presentational/media';
+import Media from 'Components/Media/Media';
 
 class MediaContainer extends Component {
-  handleOpenModal = (mediaId) => {
+  handleOpenModal = mediaId => {
     this.props.openModal(mediaId);
   };
 
@@ -13,7 +13,8 @@ class MediaContainer extends Component {
     return (
       <Media
         handleOpenModal={this.handleOpenModal}
-        {...this.props.data.toJS()} />
+        {...this.props.data.toJS()}
+      />
     );
   }
 }

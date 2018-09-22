@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import Category from 'Components/Category/Category';
-import MediaContainer from 'Components/playlist/container/media-container';
+import MediaContainer from 'Components/Media/Media.container';
 import Navbar from 'Pages/presentational/navbar';
 import Search from 'Components/search/container/search';
 

@@ -1,45 +1,48 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
-import './media.css';
+import './Media.css';
 
-// Pure component: If props are different, then re-render it.
 class Media extends PureComponent {
   handleMediaClick = () => {
-    return this.props.handleOpenModal(this.props.id);
+    const { handleOpenModal, id } = this.props;
+
+    return handleOpenModal(id);
   }
+
   render() {
     const { cover, title, author, handleClick } = this.props;
+
     return (
-      <div className="Media"
+      <div className="media"
            onClick={this.handleMediaClick}
       >
-        <div className="Media-cover">
+        <div className="media__cover">
           <img
-            className="Media-image"
+            className="media__image"
             src={cover}
             alt={title}
             width="260"
             height="160"
           />
-          <h3 className="Media-title">{title}</h3>
-          <p className="Media-author">{author}</p>
+          <h3 className="media__title">{title}</h3>
+          <p className="media__author">{author}</p>
         </div>
       </div>
     )
   }
 }
 
-Media.defaultProps = {
-  author: 'Unknown',
-  cover: './src/images/covers/default-image.png',
-};
-
 Media.propTypes = {
   author: PropTypes.string,
   cover: PropTypes.string,
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['video', 'audio']).isRequired,
+};
+
+Media.defaultProps = {
+  author: 'Unknown',
+  cover: './src/images/covers/default-image.png',
 };
 
 
