@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import { formatTime } from 'Utils/list';
-import Controls from 'Components/video-player-controls/presentational/video-player-controls';
+import Controls from 'Components/VideoPlayerControls/VideoPlayerControls';
 import FullScreen from 'Components/FullScreen/FullScreen';
 import PlayPause from 'Components/PlayPause/PlayPause';
 import ProgressBar from 'Components/progress-bar/presentational/progress-bar';

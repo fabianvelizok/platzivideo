@@ -1,0 +1,14 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.video-player-controls {
+  background: var(--primary-color);
+  border-radius: 20px;
+  bottom: 10px;
+  display: flex;
+  left: 10px;
+  padding: 0 10px;
+  position: absolute;
+  right: 10px;
+  z-index: 2;
+}
