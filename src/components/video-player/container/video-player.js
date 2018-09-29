@@ -5,7 +5,7 @@ import { formatTime } from 'Utils/list';
 import Controls from 'Components/VideoPlayerControls/VideoPlayerControls';
 import FullScreen from 'Components/FullScreen/FullScreen';
 import PlayPause from 'Components/PlayPause/PlayPause';
-import ProgressBar from 'Components/progress-bar/presentational/progress-bar';
+import ProgressBar from 'Components/ProgressBar/ProgressBar';
 import Spinner from 'Components/Spinner/Spinner';
 import Timer from 'Components/Timer/Timer';
 import Video from 'Components/video-player/presentational/video';

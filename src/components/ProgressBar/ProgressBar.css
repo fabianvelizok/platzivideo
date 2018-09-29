@@ -1,9 +1,9 @@
-.ProgressBar {
+.progress-bar {
   display: flex;
   flex: 1;
   align-items: center;
 }
 
-.ProgressBar input {
+.progress-bar__field {
   width: 100%;
 }
