@@ -2,14 +2,14 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import { searchMedia } from 'State/actions';
-import SearchForm from 'Components/search/presentational/search-form'
+import Search from 'Components/Search/Search';
 
-class Search extends Component {
-  handleRef = (element) => {
+class SearchContainer extends Component {
+  handleRef = element => {
     this.input = element;
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
     this.props.searchMedia(this.input.value);
   }
@@ -17,7 +17,7 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <SearchForm
+        <Search
           handleRef={this.handleRef}
           handleSubmit={this.handleSubmit}
         />
@@ -26,9 +26,8 @@ class Search extends Component {
   }
 }
 
-// We avoid calling the 'dispatch' method and importing the 'bindActionCreators' dependency on this way.
 const mapDispatchToProps = {
   searchMedia,
 };
 
-export default connect(null, mapDispatchToProps)(Search);
+export default connect(null, mapDispatchToProps)(SearchContainer);

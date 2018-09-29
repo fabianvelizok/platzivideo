@@ -1,17 +1,17 @@
 /* FIXME: Fix alias. */
-@import '../../../styles/variables.css';
+@import '../../styles/variables.css';
 
-.SearchForm {
+.search {
   max-width: 400px;
   margin-bottom: 20px;
 
   @media (--viewport-medium) {
-    max-width: 350px;
     margin: 0 auto;
+    max-width: 350px;
   }
 }
 
-.SearchFormInput {
+.search__field {
   background: #f2f2f2;
   padding: 20px;
   font-size: 18px;
@@ -21,14 +21,15 @@
   border:none;
   outline: 0;
   transition: .2s;
-  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+  box-shadow: 2px 2px 5px var(--dark-gray);
   box-sizing: border-box;
 
   @media (--viewport-medium) {
     width: 95%;
   }
+
+  &:focus {
+    box-shadow: 0 0 10px var(--dark-gray);
+  }
 }
 
-.SearchFormInput:focus {
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
-}

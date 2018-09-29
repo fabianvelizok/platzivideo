@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import Category from 'Components/Category/Category';
 import MediaContainer from 'Components/Media/Media.container';
 import Navbar from 'Pages/presentational/navbar';
-import Search from 'Components/search/container/search';
+import SearchContainer from 'Components/Search/Search.container';
 
 import './Categories.css';
 
@@ -43,7 +43,7 @@ const Categories = props => {
     <div className="categories">
       <Navbar />
 
-      <Search />
+      <SearchContainer />
 
       {renderSearchResults()}
 
