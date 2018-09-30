@@ -6,14 +6,13 @@ import { closeModal } from 'State/actions';
 import Categories from 'Components/Categories/Categories';
 import HandleError from 'Components/errors/container/handle-error';
 import HomeLayout from 'Pages/presentational/home-layout';
-import ModalMedia from 'Components/ModalMedia/ModalMedia';
 import ModalContainer from 'Components/Modal/Modal.container';
-import Related from 'Components/related/presentational/related';
+import ModalMedia from 'Components/ModalMedia/ModalMedia';
+import Related from 'Components/Related/Related';
 import Spinner from 'Components/Spinner/Spinner';
 import VideoPlayer from 'Components/video-player/container/video-player';
 
 class Home extends Component {
-  // States
   state = {
     modalVisible: false,
     media: {},
@@ -23,25 +22,25 @@ class Home extends Component {
     this.props.closeModal();
   }
 
-  // Lifecycle
-
   render() {
+    const { categories, modal, spinner, search } = this.props;
+
     return (
       <HandleError>
         <HomeLayout>
           <Related />
           <Categories
-            categories={this.props.categories}
-            search={this.props.search}
+            categories={categories}
+            search={search}
           />
-          <Spinner show={this.props.spinner.get('show')}/>
-          {this.props.modal.get('visible') && (
+          <Spinner show={spinner.get('show')}/>
+          {modal.get('visible') && (
             <ModalContainer>
               <ModalMedia
                 handleClick={this.handleCloseModal}
               >
                 <VideoPlayer
-                  mediaId={this.props.modal.get('mediaId')}
+                  mediaId={modal.get('mediaId')}
                 />
               </ModalMedia>
             </ModalContainer>

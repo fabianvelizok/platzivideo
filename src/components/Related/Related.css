@@ -1,0 +1,8 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.related__playlist-heading,
+.related__playlist-items,
+.related__playlist :any-link {
+  color: var(--white);
+}
