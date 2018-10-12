@@ -1,7 +1,7 @@
 import { fromJS } from 'immutable';
 
 import { SEARCH_MEDIA } from 'State/action-types';
-import normalizedData from 'Schemas';
+import { normalizedData } from 'Schemas';
 
 const initialState = fromJS({
   entities: normalizedData.entities,

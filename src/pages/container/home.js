@@ -11,6 +11,7 @@ import ModalMedia from 'Components/ModalMedia/ModalMedia';
 import Related from 'Components/Related/Related';
 import Spinner from 'Components/Spinner/Spinner';
 import VideoPlayer from 'Components/video-player/container/video-player';
+import * as selectors from 'Selectors';
 
 class Home extends Component {
   state = {
@@ -52,9 +53,10 @@ class Home extends Component {
 }
 
 function mapStateToProps(state, props) {
-  const categories = state.getIn(['data', 'categories']).map((id) => {
-    return state.getIn(['data', 'entities', 'categories', id]);
-  });
+  debugger;
+
+  const categories = selectors.denormalizedCategoriesSelector(state);
+
 
   let search = List();
   const query = state.getIn(['data', 'search']);

@@ -35,6 +35,7 @@ module.exports = {
       Entries: path.resolve(__dirname, 'src/entries/'),
       Pages: path.resolve(__dirname, 'src/pages/'),
       Schemas: path.resolve(__dirname, 'src/schemas/'),
+      Selectors: path.resolve(__dirname, 'src/selectors/'),
       State: path.resolve(__dirname, 'src/state/'),
       Static: path.resolve(__dirname, 'src/static/'),
       Styles: path.resolve(__dirname, 'src/styles/'),
