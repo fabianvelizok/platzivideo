@@ -46,7 +46,7 @@ module.exports = merge(common, {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        ASSET_PATH: JSON.stringify('http://localhost:9000/src/static'),
+        ASSET_PATH: JSON.stringify('http://localhost:3000/src/static'),
         NODE_ENV: JSON.stringify('development'),
       },
     }),
