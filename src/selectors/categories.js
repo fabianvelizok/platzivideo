@@ -14,10 +14,7 @@ export const entitiesSelector = (state) => {
 export const denormalizedCategoriesSelector = createSelector(
   categoriesSelector,
   entitiesSelector,
-  (categoryIds, entities) => {
-    categoryIds.map(id => {
-      return denormalize(id, category, entities)
-    })
-  }
+  (categoryIds, entities) =>
+    categoryIds.map(id => denormalize(id, category, entities))
 );
 

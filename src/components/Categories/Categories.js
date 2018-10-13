@@ -20,9 +20,7 @@ const Categories = props => {
               const id = item.get('id');
 
               return (
-                <li key={id}>
-                  <MediaContainer id={id} />
-                </li>
+                <li key={id}><MediaContainer id={id} /></li>
               );
             })}
           </ul>
@@ -34,7 +32,18 @@ const Categories = props => {
   const renderCategories = () => (
     <Fragment>
       {
-        props.categories.map(category => <Category key={category.get('id')} {...category.toJS()} />)
+        props.categories.map(category => {
+          const { description, id, playlist, title } = category.toJS();
+
+          return (
+            <Category
+              key={id}
+              description={description}
+              playlist={playlist}
+              title={title}
+            />
+          );
+        })
       }
     </Fragment>
   );

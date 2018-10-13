@@ -53,10 +53,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state, props) {
-  debugger;
-
   const categories = selectors.denormalizedCategoriesSelector(state);
-
 
   let search = List();
   const query = state.getIn(['data', 'search']);

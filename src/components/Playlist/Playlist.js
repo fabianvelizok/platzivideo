@@ -6,11 +6,15 @@ import './Playlist.css';
 
 const Playlist = props => (
   <ul className="playlist">
-    {props.playlist.map(mediaFileId => (
-      <li key={mediaFileId}>
-        <MediaContainer id={mediaFileId} />
-      </li>
-    ))}
+    {props.playlist.map(mediaFile => {
+      const { id } = mediaFile;
+
+      return (
+        <li key={id}>
+          <MediaContainer id={id} />
+        </li>
+      );
+    })}
   </ul>
 );
 
