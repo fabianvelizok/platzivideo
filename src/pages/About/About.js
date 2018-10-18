@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react'
+import React from 'react';
 
 import Navbar from 'Components/Navbar/Navbar';
 
 import './About.css';
 
-const About = props => (
+const About = () => (
   <section className="about">
     <Navbar />
 
