@@ -3,6 +3,7 @@
   --default-gray: gray(15);
   --dark-gray: rgba(0, 0, 0, .7);
   --white: #fff;
+  --red: #FD0537;
 }
 
 @custom-media --viewport-medium (width <= 50rem);

@@ -1,11 +1,7 @@
 @import '../../styles/variables.css';
+@import '../../styles/globals.css';
 
-body {
-  margin: 0;
-  font-family: 'Ubuntu', system-ui;
-}
-
-.HomeLayout {
+.home-layout {
   background: var(--primary-color);
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -14,8 +10,4 @@ body {
   @media (--viewport-medium) {
     grid-template-columns: auto;
   }
-}
-
-:--headings {
-  color: var(--default-gray);
 }

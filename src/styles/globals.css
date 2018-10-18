@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  font-family: 'Ubuntu', system-ui;
+}
+
+:--headings {
+  color: var(--default-gray);
+}

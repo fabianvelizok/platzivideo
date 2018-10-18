@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 
 import Category from 'Components/Category/Category';
 import MediaContainer from 'Components/Media/Media.container';
-import Navbar from 'Pages/presentational/navbar';
+import Navbar from 'Components/Navbar/Navbar';
 import SearchContainer from 'Components/Search/Search.container';
 
 import './Categories.css';

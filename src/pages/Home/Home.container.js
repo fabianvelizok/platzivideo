@@ -3,15 +3,15 @@ import { List } from 'immutable';
 import React, { Component } from 'react';
 
 import { closeModal } from 'State/actions';
+import * as selectors from 'Selectors';
 import Categories from 'Components/Categories/Categories';
 import HandleError from 'Components/errors/container/handle-error';
-import HomeLayout from 'Pages/presentational/home-layout';
+import HomeLayout from 'Components/HomeLayout/HomeLayout';
 import ModalContainer from 'Components/Modal/Modal.container';
 import ModalMedia from 'Components/ModalMedia/ModalMedia';
 import Related from 'Components/Related/Related';
 import Spinner from 'Components/Spinner/Spinner';
 import VideoPlayer from 'Components/video-player/container/video-player';
-import * as selectors from 'Selectors';
 
 class Home extends Component {
   state = {
@@ -53,6 +53,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state, props) {
+  // Refactor all this function.
   const categories = selectors.denormalizedCategoriesSelector(state);
 
   let search = List();

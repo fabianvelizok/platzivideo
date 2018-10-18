@@ -1,0 +1,23 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar__item {
+  padding: 20px;
+  padding-left: 0;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+.navbar__link--active {
+  color: var(--red);
+}

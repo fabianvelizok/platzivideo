@@ -8,8 +8,8 @@ import logger from 'redux-logger';
 import React from 'react';
 import thunk from 'redux-thunk';
 
-import About from 'Pages/presentational/about';
-import Home from 'Pages/container/home';
+import About from 'Pages/About/About';
+import HomeContainer from 'Pages/Home/Home.container';
 import rootReducer from 'State/reducers';
 
 const homeContainer = document.getElementById('home-container');
@@ -23,14 +23,14 @@ const store = createStore(
 );
 
 render(
-
-  <Provider store={store}>
-    <Router>
-      <Switch>
-        <Route exact strict path="/" component={Home} />
-        <Route exact strict path="/about" component={About} />
-      </Switch>
-    </Router>
-  </Provider>
-  , homeContainer
+  (
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route exact strict path="/" component={HomeContainer} />
+          <Route exact strict path="/about" component={About} />
+        </Switch>
+      </Router>
+    </Provider>
+  ), homeContainer
 );
