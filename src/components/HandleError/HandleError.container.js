@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import RegularError from '../presentational/regular-error';
+import RegularError from 'Components/Errors/RegularError';
 
 class HandleError extends Component {
   state = {

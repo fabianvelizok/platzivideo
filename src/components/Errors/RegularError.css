@@ -1,0 +1,8 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.regular-error {
+  color: var(--white);
+  padding: 40px 20px;
+  text-align: center;
+}

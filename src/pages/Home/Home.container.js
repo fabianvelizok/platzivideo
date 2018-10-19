@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { closeModal } from 'State/actions';
 import * as selectors from 'Selectors';
 import Categories from 'Components/Categories/Categories';
-import HandleError from 'Components/errors/container/handle-error';
+import HandleErrorContainer from 'Components/HandleError/HandleError.container';
 import HomeLayout from 'Components/HomeLayout/HomeLayout';
 import ModalContainer from 'Components/Modal/Modal.container';
 import ModalMedia from 'Components/ModalMedia/ModalMedia';
@@ -27,7 +27,7 @@ class Home extends Component {
     const { categories, modal, spinner, search } = this.props;
 
     return (
-      <HandleError>
+      <HandleErrorContainer>
         <HomeLayout>
           <Related />
           <Categories
@@ -47,7 +47,7 @@ class Home extends Component {
             </ModalContainer>
           )}
         </HomeLayout>
-      </HandleError>
+      </HandleErrorContainer>
     );
   }
 }
