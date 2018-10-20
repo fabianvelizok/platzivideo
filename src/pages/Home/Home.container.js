@@ -11,7 +11,7 @@ import ModalContainer from 'Components/Modal/Modal.container';
 import ModalMedia from 'Components/ModalMedia/ModalMedia';
 import Related from 'Components/Related/Related';
 import Spinner from 'Components/Spinner/Spinner';
-import VideoPlayer from 'Components/video-player/container/video-player';
+import VideoPlayer from 'Components/VideoPlayer/VideoPlayer.container';
 
 class Home extends Component {
   state = {

@@ -8,19 +8,19 @@ import PlayPause from 'Components/PlayPause/PlayPause';
 import ProgressBar from 'Components/ProgressBar/ProgressBar';
 import Spinner from 'Components/Spinner/Spinner';
 import Timer from 'Components/Timer/Timer';
-import Video from 'Components/video-player/presentational/video';
-import VideoPlayerLayout from 'Components/video-player/presentational/video-player-layout';
-import VideoTitle from 'Components/video-player/presentational/video-title';
+import Video from 'Components/VideoPlayer/presentational/video';
+import VideoPlayerLayout from 'Components/VideoPlayer/presentational/video-player-layout';
+import VideoTitle from 'Components/VideoPlayer/presentational/video-title';
 import Volume from 'Components/Volume/Volume';
 
 class VideoPlayer extends Component {
   state = {
-    pause: true,
-    duration: 0,
     currentTime: 0,
+    duration: 0,
     loading: false,
+    pause: true,
     prevVolumeValue: 0,
-    volumeValue: 1,
+    volumeValue: 1
   };
 
   togglePlay = () => {
@@ -136,9 +136,9 @@ class VideoPlayer extends Component {
   }
 }
 
-function mapStateToProps(state, props) {
+const mapStateToProps = (state, props) => {
   const media = state.getIn(['data', 'entities', 'mediaFiles', props.mediaId]);
   return { media };
-}
+};
 
 export default connect(mapStateToProps)(VideoPlayer);
