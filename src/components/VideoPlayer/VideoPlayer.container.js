@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import { formatTime } from 'Utils/list';
-import * as selectors from 'Selectors';
+import * as mediaFilesSelectors from 'Selectors/media';
 import Controls from 'Components/VideoPlayerControls/VideoPlayerControls';
 import FullScreen from 'Components/FullScreen/FullScreen';
 import PlayPause from 'Components/PlayPause/PlayPause';
@@ -139,7 +139,8 @@ class VideoPlayer extends Component {
 
 const mapStateToProps = (state, props) => {
   const { mediaId } = props;
-  const media = selectors.mediaById(mediaId)(state);
+
+  const media = mediaFilesSelectors.byIdSelector(mediaId)(state);
   return { media };
 };
 

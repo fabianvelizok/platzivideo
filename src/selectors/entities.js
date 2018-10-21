@@ -1,1 +1,1 @@
-export const entities = state => state.getIn('data', 'entities');
+export const entitiesSelector = state => state.getIn(['data', 'entities']);

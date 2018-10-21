@@ -3,7 +3,7 @@ import { List } from 'immutable';
 import React, { Component } from 'react';
 
 import { closeModal } from 'State/actions';
-import * as selectors from 'Selectors';
+import * as categoriesSelectors from 'Selectors/categories';
 import Categories from 'Components/Categories/Categories';
 import HandleErrorContainer from 'Components/HandleError/HandleError.container';
 import HomeLayout from 'Components/HomeLayout/HomeLayout';
@@ -54,7 +54,7 @@ class Home extends Component {
 
 function mapStateToProps(state, props) {
   // Refactor all this function.
-  const categories = selectors.denormalizedCategoriesSelector(state);
+  const categories = categoriesSelectors.denormalizedCategoriesSelector(state);
 
   let search = List();
   const query = state.getIn(['data', 'search']);

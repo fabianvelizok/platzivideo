@@ -2,13 +2,10 @@ import { createSelector } from 'reselect'
 import { denormalize } from 'normalizr';
 
 import { category } from 'Schemas';
+import { entitiesSelector } from 'Selectors/entities';
 
 export const categoriesSelector = (state) => {
   return state.getIn(['data', 'categories']);
-}
-
-export const entitiesSelector = (state) => {
-  return state.getIn(['data', 'entities']);
 }
 
 export const denormalizedCategoriesSelector = createSelector(

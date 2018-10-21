@@ -1,11 +1,11 @@
 import { createSelector } from 'reselect'
 import { denormalize } from 'normalizr';
 
-export const entitiesSelector = (state) => {
-  return state.getIn(['data', 'entities']);
-}
+import { entitiesSelector } from 'Selectors/entities';
+import { media } from 'Schemas';
 
-export const mediaByIdSelector = (mediaId) =>
-  state.getIn(['data', 'entities', 'mediaFiles', mediaId]
-);
+export const byIdSelector = mediaId =>
+  createSelector(
+    entitiesSelector, entities => denormalize(mediaId, media, entities)
+  );
 
