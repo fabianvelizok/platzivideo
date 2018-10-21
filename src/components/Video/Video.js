@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './video.css';
+import './Video.css';
 
 class Video extends Component {
   componentWillReceiveProps(nextProps) {
@@ -13,21 +13,20 @@ class Video extends Component {
     this.props.pause ? this.video.play() : this.video.pause();
   }
 
-  setRef = (element) => {
-    this.video = element;
-  }
+  setRef = element => this.video = element;
 
   render() {
     return (
-      <div className="Video">
+      <div className="video">
         <video
-          ref={this.setRef}
           autoPlay={this.props.autoplay}
-          src={this.props.src}
+          className="video__item"
           onLoadedMetadata={this.props.handleLoadedMetadata}
-          onTimeUpdate={this.props.handleTimeUpdate}
-          onSeeking={this.props.handleSeeking}
           onSeeked={this.props.handleSeeked}
+          onSeeking={this.props.handleSeeking}
+          onTimeUpdate={this.props.handleTimeUpdate}
+          ref={this.setRef}
+          src={this.props.src}
         />
       </div>
     );

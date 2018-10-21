@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './video-player-layout.css';
+import './VideoPlayerLayout.css';
 
-const VideoPlayerLayout = (props) => (
+const VideoPlayerLayout = props => (
   <div
-    className="VideoPlayerLayout"
+    className="video-player-layout"
     ref={props.setRef}
   >
     {props.children}

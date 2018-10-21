@@ -9,9 +9,9 @@ import PlayPause from 'Components/PlayPause/PlayPause';
 import ProgressBar from 'Components/ProgressBar/ProgressBar';
 import Spinner from 'Components/Spinner/Spinner';
 import Timer from 'Components/Timer/Timer';
-import Video from 'Components/VideoPlayer/presentational/video';
-import VideoPlayerLayout from 'Components/VideoPlayer/presentational/video-player-layout';
-import VideoTitle from 'Components/VideoPlayer/presentational/video-title';
+import Video from 'Components/Video/Video';
+import VideoPlayerLayout from 'Components/VideoPlayerLayout/VideoPlayerLayout';
+import VideoPlayerTitle from 'Components/VideoPlayerTitle/VideoPlayerTitle';
 import Volume from 'Components/Volume/Volume';
 
 class VideoPlayer extends Component {

@@ -1,0 +1,8 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.video-player-layout {
+  background: var(--black);
+  position: relative;
+  width: 100%;
+}

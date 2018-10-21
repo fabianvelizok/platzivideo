@@ -1,0 +1,17 @@
+/* FIXME: Fix alias. */
+@import '../../styles/variables.css';
+
+.video-player-title {
+  background: var(--dark-gray);
+  color: var(--white);
+  left: 20px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 20px;
+}
+
+.video-player-title__item {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
