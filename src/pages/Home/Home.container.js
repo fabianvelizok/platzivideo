@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 import { closeModal } from 'State/actions';
 import * as categoriesSelectors from 'Selectors/categories';
+import * as mediaFilesSelectors from 'Selectors/media';
 import Categories from 'Components/Categories/Categories';
 import HandleErrorContainer from 'Components/HandleError/HandleError.container';
 import HomeLayout from 'Components/HomeLayout/HomeLayout';
@@ -60,7 +61,7 @@ function mapStateToProps(state, props) {
   const query = state.getIn(['data', 'search']);
 
   if (query) {
-    const mediaFiles = state.getIn(['data', 'entities', 'mediaFiles']);
+    const mediaFiles = mediaFilesSelectors.mediaFilesSelector(state);
     search = mediaFiles
       .filter((item) => {
         return item.get('title').toLowerCase().includes(query) ||
