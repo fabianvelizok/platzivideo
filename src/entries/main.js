@@ -11,9 +11,10 @@ import thunk from 'redux-thunk';
 import About from 'Pages/About/About';
 import Contact from 'Pages/Contact/Contact';
 import HomeContainer from 'Pages/Home/Home.container';
+import NotFound from '../pages/NotFound/NotFound';
 import Profile from 'Pages/Profile/Profile';
-import rootReducer from 'State/reducers';
 import Videos from 'Pages/Videos/Videos';
+import rootReducer from 'State/reducers';
 
 const homeContainer = document.getElementById('home-container');
 
@@ -56,6 +57,7 @@ render(
             path="/contact"
             strict
           />
+          <Route component={NotFound} />
         </Switch>
       </Router>
     </Provider>
