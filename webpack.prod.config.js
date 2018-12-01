@@ -11,7 +11,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[hash].js',
-    publicPath: "/",
+    publicPath: '/',
     chunkFilename: 'js/[id].js',
   },
   module: {
@@ -43,11 +43,11 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("css/[name].css"),
+    new ExtractTextPlugin('css/[name].[hash].css'),
     new CleanWebpackPlugin(['dist'], { root: __dirname }),
     new webpack.DefinePlugin({
       'process.env': {
-        ASSET_PATH: JSON.stringify('http://192.168.1.56:8080'),
+        ASSET_PATH: JSON.stringify('http://127.0.0.1:8080'),
         NODE_ENV: JSON.stringify('production'),
       },
     }),
