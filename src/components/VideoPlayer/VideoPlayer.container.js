@@ -93,36 +93,39 @@ class VideoPlayer extends Component {
 
   render() {
     return (
-      <VideoPlayerLayout
-        setRef={this.setVideoPlayerRef}
-      >
-        <VideoTitle
-          title={this.props.media.get('title')}
-        />
+      <VideoPlayerLayout setRef={this.setVideoPlayerRef} >
+        <VideoPlayerTitle title={this.props.media.get('title')} />
+
         <Spinner show={this.state.loading} />
+
         <Controls>
           <PlayPause
             pause={this.state.pause}
             handleClick={this.togglePlay}
           />
+
           <Timer
             duration={formatTime(this.state.duration)}
             currentTime={formatTime(this.state.currentTime)}
           />
+
           <ProgressBar
             duration={this.state.duration}
             value={this.state.currentTime}
             handleChange={this.handleProgressChange}
           />
+
           <Volume
             value={this.state.volumeValue}
             handleChange={this.handleVolumeChange}
             handleClick={this.handleVolumeIconClick}
           />
+
           <FullScreen
             handleClick={this.handleFullScreenClick}
           />
         </Controls>
+
         <Video
           pause={this.state.pause}
           autoplay={true}
